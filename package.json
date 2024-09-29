@@ -1,0 +1,86 @@
+{
+  "name": "metchta-frontend-test",
+  "version": "1.0.0",
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "config/git/commitizen.js"
+    }
+  },
+  "private": true,
+  "scripts": {
+    "dev": "nuxt dev --dotenv .env.local --port 3003",
+    "build": "nuxt build",
+    "start": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint:eslint": "npx eslint --report-unused-disable-directives",
+    "lint:eslint:fix": "npx eslint --fix",
+    "lint:prettier": "npx prettier --check",
+    "lint:prettier:fix": "npx prettier --write",
+    "lint": "npm run lint:eslint && npm run lint:prettier",
+    "lint:fix": "npm run lint:eslint:fix && npm run lint:prettier:fix .",
+    "lint:js": "eslint --ext \".ts,.vue\" --ignore-path .gitignore .",
+    "lintfix": "prettier --write --list-different . && npm lint:js --fix",
+    "prepare": "husky install",
+    "type:check": "vue-tsc --noEmit -p ./tsconfig.json --composite false"
+  },
+  "lint-staged": {
+    "**/*.{js,ts,vue,html}": [
+      "prettier --cache --write ",
+      "eslint --cache --fix"
+    ]
+  },
+  "dependencies": {
+    "@neojp/tailwindcss-line-clamp-utilities": "1.0.1",
+    "@nuxt/typescript-runtime": "3.0.2",
+    "@nuxtjs/google-fonts": "3.1.3",
+    "@pinia/nuxt": "0.5.1",
+    "@tanstack/vue-query": "5.18.1",
+    "@vueuse/core": "10.7.2",
+    "nuxt-route-meta": "4.0.0",
+    "nuxt3-meta-pixel": "^1.0.9",
+    "pinia": "2.1.7",
+    "vue": "latest",
+    "vue-gtag-next": "1.14.0",
+    "@vant/touch-emulator": "1.4.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.5",
+    "@commitlint/config-conventional": "^17.6.5",
+    "@nuxt/types": "^2.17.3",
+    "@nuxtjs/device": "^3.1.1",
+    "@nuxtjs/eslint-config-typescript": "12.1.0",
+    "@nuxtjs/tailwindcss": "6.11.2",
+    "@types/node": "20.11.13",
+    "@typescript-eslint/eslint-plugin": "5.59.8",
+    "@typescript-eslint/parser": "5.59.8",
+    "autoprefixer": "10.4.17",
+    "commitizen": "^4.3.0",
+    "cz-customizable": "^7.0.0",
+    "dayjs-nuxt": "^2.1.9",
+    "eslint": "8.56.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-nuxt": "4.0.0",
+    "eslint-plugin-prettier": "5.1.3",
+    "eslint-plugin-vue": "9.21.0",
+    "eslint-plugin-yaml": "0.5.0",
+    "husky": "^8.0.3",
+    "lint-staged": "13.2.2",
+    "nuxt": "^3.10.3",
+    "nuxt-svgo": "^4.0.0",
+    "postcss": "^8.4.33",
+    "prettier": "3.2.4",
+    "rollup-plugin-visualizer": "^5.12.0",
+    "sass": "1.70.0",
+    "tailwindcss": "3.4.1",
+    "tailwindcss-safe-area": "^0.4.1",
+    "ts-essentials": "9.4.1",
+    "ts-interface-checker": "^1.0.2",
+    "typescript": "5.3.3",
+    "vue-tsc": "^1.8.27",
+    "@vant/nuxt": "^1.0.4",
+    "vant": "4.8.4"
+  }
+}

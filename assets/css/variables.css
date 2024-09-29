@@ -1,0 +1,63 @@
+:root {
+  --color-primary: #2667FF;
+  --color-primary-dark: #1351E2;
+  --color-primary-light: #9CBAFF;
+;
+
+  --color-dark-text: #363842;
+
+  --color-accent: #f2cf31;
+  --color-accent-20: rgba(242, 207, 49, 0.2);
+  --color-error: #f15b3b;
+  --color-info: #3775d2;
+  --color-orange: #e89e34;
+
+  --color-transparent: transparent;
+  --color-translucent: rgba(255, 255, 255, 0.5);
+  --color-footer-translucent: rgba(255, 255, 255, 0.24);
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-gray: #f1f1f1;
+  --color-gray-dark: #afafaf;
+  --color-gray-light: #dddddd;
+  --color-primary-text: #19251e;
+  --color-secondary-text: #666666;
+  --color-light-text: #b2e0ce;
+
+  --color-bg: #ffffff;
+  --color-placeholders: #ffffff;
+  --color-line: #e6e6e6;
+
+  --font-size-lg: 24px;
+  --font-size-md: 20px;
+  --font-size-reg: 16px;
+  --font-size-df: 14px;
+  --font-size-sm: 12px;
+  --font-size-xsm: 10px;
+  --font-size-xxsm: 8px;
+
+  --font-weight: 400;
+  --font-weight-bolder: 500;
+
+  --line-height-lg: 32px;
+  --line-height-md: 24px;
+  --line-height-reg: 24px;
+  --line-height-df: 16px;
+  --line-height-xsm: 12px;
+
+  --shadow-header: 0px 4px 4px rgba(126, 126, 126, 0.1);
+  --shadow-modal: 0px 2px 16px rgba(0, 0, 0, 0.24);
+  --shadow-menu: 0px 4px 12px rgba(0, 0, 0, 0.12);
+  --shadow-body: 0px 2px 8px rgba(15, 66, 101, 0.08);
+
+  --border-radius-df: 12px;
+
+  --content-width: 1296px;
+  --toolbar-height: 102px;
+  --height-tabbar: 64px;
+  --filters-height: 102px;
+
+  --tablet-width: 1110px;
+
+  --font-family: Montserrat, sans-serif;
+}

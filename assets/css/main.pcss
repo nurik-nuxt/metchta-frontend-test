@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: var(--background-color);
+  font-family: "Montserrat", sans-serif;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body * {
+  color: var(--color-primary-text);
+}
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 12px 0 10px;
+  gap: 8px;
+}
+
+.body-container {
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+.footer-container {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+//align-items: flex-start;
+  padding: 0 0 16px;
+  gap: 8px;
+}
+
+.border-primary-2 {
+  border: 2px solid var(--color-primary);
+}
+
+svg.nuxt-icon,
+svg rect,
+svg path {
+  color: inherit;
+}
+
+/* Overriding VANT CSS variables */
+:root:root {
+  --van-primary-color: var(--color-primary);
+  --van-cell-group-background: transparent;
+}
+
+/* TODO: временный костыль для скрытия скроллбара на мобильных устройствах */
+@media screen and (max-width: var(--tablet-width)) {
+  body.is-touch {
+    /* Works on Firefox */
+    * {
+      scrollbar-color: transparent transparent !important;
+    }
+    *::-webkit-scrollbar-track {
+      background: transparent !important;
+    }
+    *::-webkit-scrollbar-thumb {
+      background-color: transparent !important;
+      border: 3px solid transparent !important;
+    }
+  }
+}
+.container-t{
+  max-width: var(--tablet-width) !important;
+  margin: 0 auto!important;
+  @apply w-full;
+}
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) var(--color-gray-dark);
+}
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 3px;
+  background: var(--color-line);
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border-radius: 20px;
+  border: 3px solid var(--color-line);
+}
